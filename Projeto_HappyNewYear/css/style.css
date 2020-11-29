@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #ff4e2b;
+    display: flex;
+}
+
+.container .imgbox{
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background-image: url(../img/New_Year.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container .contdownbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 450px);
+}
+
+.container .contdownbox h2{
+    text-align: center;
+    font-size: 1.7em;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    line-height: 4em;
+}
+
+.container .contdownbox h2 span{
+    font-size: 6em;
+}
+
+.container .contdownbox h2 span i{
+    font-style: initial;
+    color: #ff0;
+}
+
+.container .contdownbox .contdown{
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.1);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .contdownbox .contdown div{
+    position: relative;
+    width: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0 15px;
+    margin-top: -25px;
+}
+
+.container .contdownbox .contdown div:before{
+    content: 'text';
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    font-size: 0.35em;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.container .contdownbox .contdown div#day:before{
+    content: 'Dias';
+}
+
+.container .contdownbox .contdown div#hour:before{
+    content: 'Horas';
+}
+
+.container .contdownbox .contdown div#minute:before{
+    content: 'Minutos';
+}
+
+.container .contdownbox .contdown div#second:before{
+    content: 'Segundos';
+}
+
+.container .contdownbox .contdown div#second{
+    color: #ff0;
+}
+
+@media screen and (max-width: 991px){
+
+    .container .imgbox{
+        display: none;
+    }
+
+    .container .contdownbox{
+        width: 100%; 
+    }
+}
+
+@media screen and (max-width: 680px){
+
+    .container .contdownbox h2{
+        font-size: 1.1em;
+    }
+
+    .container .contdownbox .contdown{
+        height: 100px;
+    }
+
+    .container .contdownbox .contdown div{
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+        margin-top: -25px;
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+
+    .container .contdownbox h2{
+        font-size: 0.95em;
+    }
+
+}
